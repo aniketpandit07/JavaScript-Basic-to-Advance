@@ -42,3 +42,4 @@ console.log("B",arr2);          //it change the original array and return remain
 
 
 
+
