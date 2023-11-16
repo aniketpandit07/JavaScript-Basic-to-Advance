@@ -32,6 +32,6 @@ console.log(Math.max(3,6,25,77,1));  //takes multiple numbers and returns a maxi
 
 //for getting values in between desired range
 // in this case we want values between the 10 and 20
-const min = 10;
-const max = 20;
+const min = 5;
+const max = 15;
 console.log(Math.floor(Math.random()* ((max-min) +1))+ min);

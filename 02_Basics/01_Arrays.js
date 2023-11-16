@@ -3,7 +3,7 @@
 //js arrays are resizable
 //0 based indexing
 //when u do copy operation it create SHALLOW COPY of that array
-//SHALL COPY of an object is a copy whose properties share same reference 
+//SHALLOW COPY of an object is a copy whose properties share same reference 
 
 const arr = [2,5,2,8,23, 'hello'];
 console.log(typeof arr);

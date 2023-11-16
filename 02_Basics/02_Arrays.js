@@ -2,7 +2,7 @@ const marvel = ["Ironman", "Spiderman", "Thor", "Loki"];
 const dc = ["Batman", "Superman", "Flash", "Aquaman"];
 
 
-//push()
+//push operation perform here()
 //marvel.push(dc);
 //console.log(marvel);  //push operation gives the array within the array i original array
 //console.log(marvel[4][2]);  //4th index is array itself in that array 2nd index element is Flash
