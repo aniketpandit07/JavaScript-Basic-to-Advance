@@ -41,4 +41,4 @@ console.log(Array.from({name: 'Aniketp'}));  //it gives empty array  because Arr
 let a= 100
 let b = 200
 let c= 300
-console.log(Array.of(a,b,c));
+console.log(Array.of(a,b,c));   //  [ 100, 200, 300 ] this method create array from the multiple variable

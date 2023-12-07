@@ -18,7 +18,7 @@ console.log(arr2);
 arr2.pop();
 console.log(arr2);
 
-arr2.unshift(1000);  //UNSHIFT == PUSH   unshift add element at first place and push also
+arr2.unshift(1000);  //UNSHIFT == PUSH   unshift add element at first place and push add from last
 console.log(arr2);
 
 arr2.shift();        //SHIFT == POP    but shift remove first element whereas pop remove last element
