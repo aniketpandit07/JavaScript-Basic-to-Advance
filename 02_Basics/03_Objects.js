@@ -18,8 +18,8 @@ const jsUser ={
     language:["Marathi", "Hindi", "English"]
 }
 
-console.log(jsUser.name);
-console.log(jsUser["name"]);
+console.log(jsUser.name);  //method 1 to access data in obj
+console.log(jsUser["name"]);  // method 2 to access data in obj (recommanded)
 console.log(jsUser["fullName"]); 
 console.log(jsUser[mySymbol]);
 console.log(typeof mySymbol);

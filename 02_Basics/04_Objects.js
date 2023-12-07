@@ -28,21 +28,21 @@ const regularUser = {
     }
 }
 
-console.log(regularUser.fullname.userFullname.firstname);
+console.log(regularUser.fullname.userFullname.firstname);  //Aniket
 
 
 const obj1 ={1:"apple", 2:"Banana"}
 const obj2 ={3:"Chickoo", 4:"Dalimb"}
 const result1 = {obj1,obj2}
-console.log(result1);
+console.log(result1);     
 
 //by using assign
 const result2 =Object.assign(obj1,obj2)
-console.log(result2);
+console.log(result2);  //    { '1': 'apple', '2': 'Banana', '3': 'Chickoo', '4': 'Dalimb' }
 
 //by using spread operator
 const result3 = {...obj1, ...obj2}
-console.log(result3);
+console.log(result3);  //{ '1': 'apple', '2': 'Banana', '3': 'Chickoo', '4': 'Dalimb' }
 
 
 //destructuring in objects
@@ -60,8 +60,8 @@ const course = {
 
 
 const {price: p} = course;  //destructuring
-console.log(p);
-console.log(typeof p);
+console.log(p);  ///333
+console.log(typeof p);  //string
  
 
 
