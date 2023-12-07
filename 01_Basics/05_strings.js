@@ -10,7 +10,7 @@ console.log(`my name is ${name} and my score is ${myScore}`);
 console.log(name[0]);
 
 const Aname = new String("Ansahu_man");
-console.log(Aname[4]);
+console.log(Aname[4]);  // 0 based indexing
 console.log(Aname.toLowerCase());
 console.log(Aname.charAt(3));
 console.log(Aname.indexOf('a'));  //first occured index return
@@ -21,11 +21,11 @@ let newstring1 = "     dfaslkf      ";
 let newString2 = console.log(newstring1.trim());
 
 let url = "www.wafjl.%20.sdfkl/as/%20fl.com"
-console.log(url.replace("%20", "-"));  //only replace first occurence of string
-console.log(url.replace(/%20/g, "-"));  // replace all occurence of string
+console.log(url.replace("%20", "-"));  //only replace first occurence in string
+console.log(url.replace(/%20/g, "-"));  // replace all occurence in string
 
-console.log(url.includes("waf"));
+console.log(url.includes("waf"));  //return boolean value
 
 
 let tarif = "Blue Eyes Hepnotize teri kardi menu";
-console.log(tarif.split(' '));
+console.log(tarif.split(' '));  //make each word as a seperate array

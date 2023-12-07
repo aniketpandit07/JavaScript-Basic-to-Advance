@@ -20,6 +20,8 @@ let myTimestamp = Date.now();
 console.log(myTimestamp);    //1699890588285  this is the time in milisecond from 1 january 1970 to till now today
 console.log(Math.floor(myTimestamp/1000));   //1699890943  this is time in seconds from 1 jan 1970 to till today
 
+let date = new Date()
+console.log(date.toLocaleTimeString());
 
 
 

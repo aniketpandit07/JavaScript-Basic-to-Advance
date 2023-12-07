@@ -4,9 +4,9 @@
 
 let score = 'esfs';
 let valueInNumber = Number (score);
-console.log(typeof valueInNumber);
-console.log(score);  
-console.log(valueInNumber);
+console.log(typeof valueInNumber);  //number
+console.log(score);  //esfs
+console.log(valueInNumber); //NaN
 
 //*******NOTES*******
 //33 => 33

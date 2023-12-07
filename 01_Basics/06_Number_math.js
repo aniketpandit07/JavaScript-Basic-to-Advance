@@ -9,11 +9,12 @@ console.log(balance.toString().length);  //it gives length of string or number
 console.log(balance.toFixed(2));   //it gives value till 2 or defined precision
 
 const otherNUMBER = 324.231;
-console.log(otherNUMBER.toPrecision(4));
-
-const hundreds = 10040;
+console.log(otherNUMBER.toPrecision(5)); // it take value from left to right upto given digits,here (5) means 324.23
+ 
+const hundreds = 1007400;
 console.log(hundreds.toLocaleString());  //American number reading 
-console.log(hundreds.toLocaleString('en-In'));   //Indian number reading
+const thousands = 10_07_400;  //we actually put _ in between numbers so that we can read it clearly
+console.log(thousands.toLocaleString('en-In'));   //Indian number reading
 
 
 // ++++++++++++++++  MATHS  ++++++++++++++++++
@@ -26,9 +27,9 @@ console.log(Math.floor(3.9));  //round of the value to lower number
 console.log(Math.min(3,6,25,77,1));  //takes multiple numbers and returns a minimun of them
 console.log(Math.max(3,6,25,77,1));  //takes multiple numbers and returns a maximum of them
 
-// console.log(Math.random());  //Everytime returns the random value
-// console.log((Math.random()*10)+1);
-// console.log(Math.floor(Math.random()*10)+1);
+console.log(Math.random());  //Everytime returns the random value between 0.0 to 1.0
+console.log((Math.random()*10)); //now this will give value between 0.0 to 10.0
+console.log(Math.floor(Math.random()*10)+1); // this will give value between 1 to 10
 
 //for getting values in between desired range
 // in this case we want values between the 10 and 20
