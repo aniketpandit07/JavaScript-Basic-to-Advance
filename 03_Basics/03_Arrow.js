@@ -3,7 +3,7 @@ const user = {
     price: 384,
     welcomeMsg : function(){
         console.log(`${this.username} welcome to India`);
-        //console.log(this);   //this prints the current context
+        console.log(this);   //this prints the current context
     }
 }
 
@@ -19,16 +19,16 @@ console.log(this);
 // }
 // hello()
 
-//`this` in function stored in variable
-// const chai = function(){
-//     let uname = "aaaaa"
-//     console.log(this.uname);
-// }
-// chai()
+// `this` in function stored in variable
+const chai = function(){
+    let uname = "aaaaa"
+    console.log(this.uname);
+}
+chai()
 
 
-//Arrow function
-// const chai =() =>{
+// Arrow function
+// const chaii =() =>{
 //     let username = "Aniket"
 //     console.log(this.username);
 // }

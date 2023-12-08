@@ -8,11 +8,11 @@
 
 function one(){
     const username = "aniket"
-    //console.log(website);
+    // console.log(website);    //it cann't execute because parent cann't access children function
 
     function two(){
         const website = "Youtube"
-        console.log(username);
+        console.log(username);  //it can be exist because children can access parent
     }
    
 
@@ -31,4 +31,4 @@ if(true){
     }
     //console.log(website);  //error
 }
-console.log(uname);  //error
+// console.log(uname);  //error

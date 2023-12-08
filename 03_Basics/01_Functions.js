@@ -18,8 +18,8 @@ console.log(sayMyName);
 // function addtwonos (num1, num2){
 //     console.log(num1 +num2);
 // }
-// let result = addtwonos(3,undefined) 
-// console.log(result);  
+// let resultt = addtwonos(3,undefined) 
+// console.log(resultt);  
 
 //method1
 function addtwonos (num1, num2){
