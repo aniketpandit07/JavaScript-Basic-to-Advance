@@ -24,7 +24,7 @@ console.log(newNums2);
 const numArr = [1,2,4]
 
 const total = numArr.reduce(function (accumelator, currentValue){
-    //console.log(`acc: ${accumelator} and currrval: ${currentValue}`);
+    console.log(`acc: ${accumelator} and currrval: ${currentValue}`);
     return accumelator + currentValue
 },0) 
 console.log(total);

@@ -12,7 +12,7 @@ for (const num of arr) {
 }
 
 
-//prints all the elemnts one by one from array
+//prints all the elemnts one by one from variable
 const greetings = 'hello world'
 for(const greet of greetings){
     console.log(greet);
@@ -21,21 +21,30 @@ for(const greet of greetings){
 // ++++++++++ Map ++++++++++ 
 //map is object and hold the unique value
 const map = new Map()
-map.set(`MH`,'maharashtra')
+map.set('MH','maharashtra')
 map.set(`GJ`,`gujrat`)
 map.set(`TN`,`Telangana`)
 map.set(`TN`,`Telangana`)  //duplicate not allowed
 console.log(map);
 
+
+
 // ++++++++++  for of loop on Map ++++++++++ 
 
-// for(const key of map){
-//     console.log(key);
-// }                      // it gives whole array
+for(const key of map){
+    console.log(key);
+}                      // it gives whole array
 
-// for(const [key, value] of map){
-//     console.log(key, `==>>`, value );
-// }                     // destructuring array
+console.log(typeof map);  //object
+
+
+
+for(const [key, value] of map){
+    console.log(key, `==>>`, value );
+}                     // destructuring array
+
+console.log(typeof map);    //object
+
 
 
 //  ++++++++++ For of on object ++++++++++ 
@@ -66,7 +75,7 @@ const myObj2 = {
 }
 
 for (const keys in myObj2) {
-    console.log(`${keys}, ${myObj2[keys]}`);
+    console.log(`key: ${keys} value: ${myObj2[keys]}`);
 }
 //or
 for (const keys in myObj2) {
@@ -74,10 +83,16 @@ for (const keys in myObj2) {
 }
 
 // ++++++++++  for in loop on the Array  ++++++++++ 
-// in the for in loop it returns the keys of array
-const langs = ['c', 'cpp', 'java', 'js']
+// in the for in loop it returns the keys and value of array
+let langs = ['c', 'cpp', 'java', 'js']
 for (const key in langs) {
-    console.log(key);
+    console.log(key, langs[key]);
+}
+
+//or we just print the value of an array
+langs = ['c', 'cpp', 'java', 'js']
+for (const key in langs) {
+    console.log( langs[key]);
 }
 
 

@@ -23,7 +23,7 @@ let num2 = myNums.filter((num) => {
 
 
 
- //above example using for each operarion
+ //above filter example using for each operarion
 //1 create an empty array
 const newNums = []
 
