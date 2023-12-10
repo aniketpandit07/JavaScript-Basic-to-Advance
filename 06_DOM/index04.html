@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+
+<script>
+    //create a function that add language in li tag
+    //method 1
+    function addLanguage (langName){
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage('python')
+    addLanguage('java')
+
+    //method 2 more optimized
+    function addOptiLang (langName){
+        const li = document.createElement('li')
+        const addText = document.createTextNode(langName)
+        li.appendChild(addText)
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLang("Golang")
+
+    //edit
+    const secondLang = document.querySelector('li:nth-child(2)')
+    secondLang.innerHTML = "mojo"
+
+    //or more optimized
+    const newLi = document.createElement('li') //1 new li element creat kiya aur usko newLi variable me store kiya
+    newLi.textContent = 'mojo' // us newLi variable ke text content me edited value rakh dii
+    secondLang.replaceWith(newLi)  //aur secondLang ko edited value se replace kr diya
+
+    //edit first element
+    const firstLang = document.querySelector('li:first-child')
+    firstLang.innerHTML = 'TypeScript' //we can do by using  firstLang.outerHTML = '<li>typescript</li>'
+
+    //remove
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()  //removed golang
+</script>
+</html>

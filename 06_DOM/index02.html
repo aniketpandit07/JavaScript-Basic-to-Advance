@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thursday</div>
+    </div>
+  </body>
+  <script>
+    const parent = document.querySelector(".parent");
+    console.log(parent); //it return whole parent div
+    console.log(parent.children); //it gives the html collection of days ie parent's childrens
+    console.log(parent.children[0]); //it gives whole <div class="day">Monday</div>
+    console.log(parent.children[0].innerHTML); //monday
+    for (let i = 0; i < parent.children.length; i++) {
+      console.log(parent.children[i].innerHTML);
+    }
+    parent.children[2].style.color = "Orange";
+    console.log(parent.firstElementChild);  //moving towards parent to child
+    console.log(parent.lastElementChild);
+
+   const dayOne = document.querySelector('.day')
+    console.log(dayOne);
+    console.log(dayOne.parentElement);  // moving towards children to parent
+
+    console.log(dayOne.nextElementSibling);  //monday sibling is tuesday haha
+
+    //++++ IMP ++++
+    console.log("Nodes", parent.childNodes);  //9 because 4 divs and 5 nextline element it counts 
+    </script>
+</html>

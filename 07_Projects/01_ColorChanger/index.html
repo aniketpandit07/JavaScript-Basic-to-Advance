@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+    <h1 class="h1">Color Scheme Changer</h1>
+    <div class="flex">
+    <span class="button" id="gray"></span>
+    <span class="button" id="yellow"></span>
+    <span class="button" id="green"></span>
+    <span class="button" id="red"></span>
+    <span class="button" id="blue"></span>
+</div>
+    <h2>Try clicking one of the color</h2>
+
+   <script>
+   const buttons = document.querySelectorAll('.button')
+   const body = document.querySelector('body')
+   buttons.forEach(function (btn){
+    console.log(btn);
+    btn.addEventListener('click', function(e){
+        console.log(e);
+        console.log(e.target); //<span class="button" id="gray"></span>
+        if (e.target.id === 'gray') {
+            body.style.backgroundColor = e.target.id
+        }
+        if (e.target.id === 'yellow') {
+            body.style.backgroundColor = e.target.id
+        }
+        if (e.target.id === 'green') {
+            body.style.backgroundColor = e.target.id
+        }
+        if (e.target.id === 'red') {
+            body.style.backgroundColor = e.target.id
+        }
+        if (e.target.id === 'blue') {
+            body.style.backgroundColor = e.target.id
+        }
+    })
+   })
+   </script>
+</body>
+
+</html>

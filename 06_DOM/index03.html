@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //dynamically created div present inside the main memory only
+    const myDiv =document.createElement('div')
+    console.log(myDiv);
+    myDiv.className = "main"  //setting class
+    myDiv.id ="myId"  // setting id
+    myDiv.setAttribute("title", "myTitle") //setting custom title or attribute
+    myDiv.setAttribute("target", "_blank") // setting custom attribute
+    //style added
+    myDiv.style.backgroundColor ="Orange"
+    myDiv.style.padding = "12px"
+
+   /* method1
+   const addText = myDiv.innerHTML =" Learning DOM"
+    //for reflecting this myDiv on web page we can append this child into our html body
+    document.body.appendChild(myDiv)  //now myDiv will show on web page */
+
+    //or 2nd method is create text node and append child in div and then append all the stuff in the body
+
+    //method2
+    const addText = document.createTextNode("Learning DOM")
+    myDiv.appendChild(addText)
+    //for reflecting this myDiv on web page we can append this child into our html body
+    document.body.appendChild(myDiv)  //now myDiv will show on web page 
+
+</script>
+</html>
