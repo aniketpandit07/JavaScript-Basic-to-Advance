@@ -20,10 +20,11 @@ const bal =1000;
 if (bal >300) console.log("rich");
 
 //switch
-//without break keyword it execute other cases too. Except default
-const month =3;
+//without break keyword it execute other cases too.
+//in JS we can add characters in case
+const month ="A";
 switch (month) {
-    case 1:
+    case "A":
         console.log("jan");
         break;
     case 2:
