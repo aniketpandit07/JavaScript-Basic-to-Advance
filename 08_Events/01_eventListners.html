@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Events I</title>
+</head>
+<body>
+    <div >
+        <ul id="images">
+            <li><img width="200px" src="img/aloevera.jpeg" alt="aloevera" id="aloevera"></li>
+            <li><img width="200px" src="img/bulb.jpeg" alt="bulb" id="bulb"></li>
+            <li><img width="200px" src="img/clouds.jpeg" alt="clouds" id="clouds"></li>
+            <li><img width="200px" src="img/farm.jpeg" alt="farm" id="farm"></li>
+            <li><img width="200px" src="img/orange flower wallpaper.jpg" alt="flower" id="flower"></li>
+            <li><img width="200px" src="img/rose.jpeg" alt="rose" id="rose"></li>
+            <li><img width="200px" src="img/streetlight.jpeg" alt="streetlight" id="streetlight"></li>
+            <li><a href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+
+    //traditional method
+    // document.getElementById('bulb').onclick = function(){
+    //     alert('bulb clicked')
+    // }
+
+    //new method 
+    document.getElementById('bulb').addEventListener('click', function(e){
+        console.log(e);  // this e object is very imp
+    }, false)       //its by default false
+
+    //learn these events
+    //type, timestamp, defaultprevented, target, toElement, srcElement, currTarget
+    //clientX, clientY, screenX, screenY
+    //altKey, ctrlKey, shiftKey, keyCode
+
+    //EVENT BUBBLING happen here
+    //in the event bubbling first local event happen then global event
+    //in this example, when we click to bulb then first bulb event trigger and then global event trigger
+    //just like buuble goes from bottom to top (local to global)
+    
+    
+    // document.getElementById('images').addEventListener('click', function(){
+    //     alert('clicked to image div')
+
+    // })
+
+    // document.getElementById('bulb').addEventListener('click', function(){
+    //     alert('bulb clicked')
+            //e.stopPropogation()  //it actually stops the bubbling propogation
+    // })
+
+    
+
+    //but we can change this behaviour with the help of event propogation by changing its default to true
+    //when we add third variable as a true it behaves like a EVENT CAPTUARING
+    //in this example when we click to clouds, first global event triggers then local cloud event triggers
+
+
+    // document.getElementById('images').addEventListener('click', function(){
+    //     alert('you clicked whole img tag')
+    // },true)
+
+    // document.getElementById('clouds').addEventListener('click', function(){
+    //     alert ('clicked to clouds')
+    // },true)
+
+
+
+    //++++ problem ++++
+    //whenever we clicked to image instantly that image should be vanish/remove
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.tagName);    //e.target gives img tag whereas e.target.parentNode gives li tag
+        if(e.target.tagName === 'IMG'){
+
+            let removeIt =e.target.parentNode // li node store in removeIt variable
+            removeIt.remove()     //easy method to remove
+        }
+
+        //other method to remove targetted element
+        // removeIt.parentNode.removeChild(removeIt)     //removeIt=li  removeIt.parentNode=ul  ul ka child li
+
+
+    })
+
+
+
+</script>
+</html>
