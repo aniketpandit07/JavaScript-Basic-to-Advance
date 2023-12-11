@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Pandit Jewellers</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+
+  <script>
+    //method1 by directly passing function into setInterval
+    // setInterval(function(){
+    //     console.log('best jewellers shop', Date.now());
+    // },2000)
+
+    //method2 by passing function ref into setInterval
+    // const sayDate = function(){
+    //     console.log('this is best shop', Date());
+    // }
+    // setInterval(sayDate, 1000);
+
+    //in setInterval it also accepts third parameter
+
+    //     const sayDate = function(str){
+    //         console.log(`this is best shop in ${str}`, Date());
+    //     }
+    //     setInterval(sayDate, 1000, 'Ambajogai');
+
+
+    //problem
+    let setInt
+    const intervals = function () {
+      console.log(`Love you 3000`, Date.now());
+    }
+
+    
+    document.querySelector("#start").addEventListener('click',function(){
+       setInt = setInterval(intervals, 1000)
+        
+    })
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearInterval(setInt)
+    })
+     
+  </script>
+</html>
