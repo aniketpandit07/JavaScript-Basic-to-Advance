@@ -1,0 +1,46 @@
+<!-- Async Code  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Aniket Pandit</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    //passing function directly
+    setTimeout(function(){
+        console.log('Elvish Bhoiiiii');
+    },2000)   //in setTimeout we put function without name and time after how many seconds code will execute 2sec = 2000msec
+
+    //method 2 by passing function reference
+    const sayMyName =  function(){
+        console.log('King Ragnar, that is my name!');
+    }
+    setTimeout(sayMyName,4000)  // in setTimeout we pass a function reference with the time
+
+    //changing h1 dynamically
+    const changeText = function(){
+        document.querySelector('h1').innerHTML ="Name changed bhoiii"
+    }
+
+    const stopExecution = setTimeout(changeText,2000)  //your h1 changed to this above name
+
+    // but if we want to stop that event happening before the execution, for that we use clearTimeout
+    //if wee directly add clearTimeout then our setTimeot never perform
+    // for avoiding this conflicts we use clearTimeout on some special events
+
+    //clearTimeout(stopExecution)  // this directly stop execution
+
+    //now this function stop execution on special event afer clicking on a button
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(stopExecution)
+        console.log('event stopped after clicking to button');
+    })
+
+</script>
+</html>
