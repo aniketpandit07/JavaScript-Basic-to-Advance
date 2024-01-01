@@ -6,14 +6,14 @@ This JavaScript tutorial repository contains all the code files that are taught 
 ## Contents
 **01 Basics**  
 1. datatypeOpeation  
-1. variables  
-2. datatypeConversion
-2. datatypes
-3. comparison
-4. datatypeSummary
-5. strings
-6. Number math
-7. Dates 
+2. variables  
+3. datatypeConversion
+4. datatypes
+5. comparison
+6. datatypeSummary
+8. strings
+9. Number math
+10. Dates 
 
 #
 **02 Basic**  
